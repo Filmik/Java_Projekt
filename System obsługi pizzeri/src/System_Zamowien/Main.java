@@ -1,4 +1,4 @@
-package System_Zamóweiñ;
+package System_Zamowien;
 //import java.util.Scanner;
 public class Main {
 	public static void main(String[] args){

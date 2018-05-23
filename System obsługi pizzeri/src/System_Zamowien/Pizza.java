@@ -1,4 +1,4 @@
-package System_Zamóweiñ;
+package System_Zamowien;
 
 public class Pizza {
 
