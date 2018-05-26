@@ -2,7 +2,7 @@ package System_Zamowien;
 import java.util.Scanner;
 
 public class Pizza {
-
+//a
 	protected String nazwa;
 	
 	protected String[] skladniki= new String[15]; //mo¿e tablica stringow??? albo jakoœ inaczej
