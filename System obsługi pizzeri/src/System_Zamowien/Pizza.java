@@ -17,17 +17,34 @@ public class Pizza {
 	public String podaj_skladniki() {
 		System.out.println("Podaj sk³adniki pizzy");
 		int x=0;
-		return skladniki[x];
-		for(x=2;x>14;x++) {
+		String odp;
+		do{
+		System.out.println("Skladnik_"+(x+1));
+		Scanner	skladnik=new Scanner(System.in);
+		skladniki[x]= skladnik.nextLine() ;
 		System.out.println("Jeszcze jeden s³adnik? Tak=t/Nie=n");
-		String odp ;
-		Scanner odczyt = new Scanner(System.in);
+		Scanner odczyt= new Scanner(System.in);
 		odp= odczyt.nextLine() ;
-		//	return odp;//jak wpisaæ liczbe w konsoli?
-		
-		}
+		x=x+1;
+		if(odp.equals("n")){
+			x=15;
+		 }
+		}while(x!=15);
+		return skladniki[1];
 	}
 	
+	public void wypisz_skladniki() {
+		int x=0;
+		System.out.println("Skldniki(");
+		do {
+		System.out.println(skladniki[x]+",");
+		x=x+1;
+		if(skladniki[x]==null){
+			x=15;
+		}
+		}while(x!=15);
+		System.out.println(")");
+	}
 	
 	//opis zawieraj¹cy/sk³daniki,posiom ostroœci,cena/zale¿ne od zawartoœci itp. 
 	//sos-ostroœæ=1
