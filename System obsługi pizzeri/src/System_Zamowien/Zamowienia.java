@@ -1,7 +1,7 @@
 package System_Zamowien;
 
 public class Zamowienia extends Pizza{
-//a
+
 	/*public void Strona_glowna() {
 		System.out.println("System sk³adania zamowienia");
 		int ilosc;
