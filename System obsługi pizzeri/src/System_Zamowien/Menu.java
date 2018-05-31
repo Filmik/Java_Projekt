@@ -1,24 +1,62 @@
 package System_Zamowien;
 
-public class Menu {
+import java.util.Scanner;
+//import java.lang.*;
 
+public class Menu extends Main {
+	
 	protected String nazwa;
 	protected String[] skladniki= new String[15];
 	public int ostrosc;
-	public int cena;// cena œredniej+5z³ cena du¿ej w stosunku do ma³ej+10z³ //mozna dodaæ jedn¹ z trzech metod
+	public int cena;
+	// cena œredniej+5z³ cena du¿ej w stosunku do ma³ej+10z³ //mozna dodaæ jedn¹ z trzech metod
 	//Przy³ad
 	
-	public String Podaj_si³e(){
+	//zrob z tego klase i bedzie fabryka!
+	public String Podaj_nazwa(){
 		return nazwa;}
+	public void Ustaw_nazwa(String nazwa){
+		this.nazwa= nazwa;}
 	
-	public String Podaj_obrona(){
+	public String Podaj_skladniki(){
+		return skladniki[15];}
+	public void Ustaw_skladniki(String[] skladniki){
+		if(nazwa=="Wegetariañska") {
+		this.skladniki[0]= "papryka";
+		this.skladniki[1]= "pomido";
+		this.skladniki[2]= "ser";
+		}
+		if(nazwa=="Capricciosa") {
+			this.skladniki[0]= "pieczarki";
+			this.skladniki[1]= "sos";
+			this.skladniki[2]= "szynka";
+			}
+		if(nazwa=="Pepperoni") {
+			this.skladniki[0]= "salami";
+			this.skladniki[1]= "papryka ostra";
+			this.skladniki[2]= "cebula";
+			this.skladniki[3]= "ser";
+			}
+	}
+	
+	public int Podaj_ostrosc(){
+		return ostrosc;}
+	public void Ustaw_ostrosc(int ostrosc){
+		this.ostrosc= ostrosc;}
+		
+	public int Podaj_cena(){
+		return cena;}
+	public void Ustaw_cena(int cena){
+		this.cena= cena;}
+	
+	/*public String Podaj_skladniki(){
 		return skladniki[15];}
 	
-	public int Podaj_inteligencja(){
+	public int Podaj_ostrosc(){
 		return ostrosc;}
 	
 	public int Podaj_celnoœæ(){
-		return cena;}
+		return cena;}*/
 	
 	public void wypisz_skladniki() {
 		int x=0;
@@ -35,16 +73,11 @@ public class Menu {
 		System.out.print((cena-5)+" z³ ma³a,");
 		System.out.print(cena+" z³ œrednia,");
 		System.out.println((cena+5)+" z³ du¿a");
-//capricciosa (pieczarki, sos, szynka), ostroœæ 1, 22 z³ ma³a, 27 z³ œrednia, 32 z³ du¿a
 	}
 	
 	public void menu() {
-		System.out.println("Menu");
-		System.out.println("-----------------------------------------");
-		System.out.println("");
 		if(nazwa!=null){
 		wypisz_skladniki();
 		}
-		System.out.println("-----------------------------------------");
-		}
+	}
 }

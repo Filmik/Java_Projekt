@@ -2,39 +2,67 @@ package System_Zamowien;
 import java.util.Scanner;
 
 public class Main {
+	
 	public static void main(String[] args){
 		
 		System.out.println("Witaj w pizzeri 'Leone'");
+		//int l=1;
 		Pizza Pizza1=new Pizza();
-		//System.out.println("Wybierz pizze z listy:");
+		Pizza Wegetarianska=new Pizza();
+		Pizza Capricciosa=new Pizza();
+		Pizza Pepperoni=new Pizza();
+		
+		Wegetarianska.Ustaw_nazwa("Wegetariañska");
+		Wegetarianska.Ustaw_skladniki(args);
+		Wegetarianska.Ustaw_ostrosc(0);
+		Wegetarianska.Ustaw_cena(25);
+		System.out.println("a= "+Wegetarianska.Podaj_nazwa());//DZIA£A!!!
+		
+		
+		Capricciosa.Ustaw_nazwa("Capricciosa");
+		Capricciosa.Ustaw_skladniki(args);
+		Capricciosa.Ustaw_ostrosc(1);
+		Capricciosa.Ustaw_cena(27);
+		
+		Pepperoni.Ustaw_nazwa("Pepperoni");
+		Pepperoni.Ustaw_skladniki(args);
+		Pepperoni.Ustaw_ostrosc(5);
+		Pepperoni.Ustaw_cena(30);
+		
 		/*albo odczyt i zapis do pliku albo predefiniowane menu i dodawanie pizzy tylko
-		na czas dzia³ania programu 
-		Pizza*/
+		na czas dzia³ania programu */
+		
 		String odp;
 		System.out.println("Czy chcesz dodaæ now¹ pizze do Menu? Tak=t/Nie=n");
 		Scanner odczyt= new Scanner(System.in);
 		odp= odczyt.nextLine() ;
-		
+	
 		if(odp.equals("t")){
 		System.out.println("Tworzenie Pizzy:");
 		//Pizza Pizza1=new Pizza();
-		//Stwoz nowy obiekt jeœli odp=t
+		//Jakiœ wzorzec projektowy
 		Pizza1.podaj_nazwe();
 		Pizza1.podaj_skladniki();
 		Pizza1.podaj_ostrosc();
 		Pizza1.podaj_cene();
 		}
-		
+		System.out.println("Menu");
+		System.out.println("-------------------------------------------------------------------------------------------");
+		Wegetarianska.menu();
+		Capricciosa.menu();
+		Pepperoni.menu();
 		Pizza1.menu();
+		System.out.println("-------------------------------------------------------------------------------------------");
+
 		
 		System.out.println("Czy chcesz zamówiæ pizze? Tak=t/Nie=n");
 		Scanner zam= new Scanner(System.in);
 		odp= zam.nextLine();
-		if(odp.equals('t')) {
-		System.out.println("Tworzenie zamowienia:");
-		System.out.println("Wybierz Pizze:");
-		System.out.println("Podaj wielkoœæ:");
-		System.out.println("Podaj iloœæ:");
+		if(odp.equals("t")){
+		Zamowienia Order1= new Zamowienia();
+		Order1.Skladanie_zamowienia();
+		Order1.Wypisz_zamowienie();
 		}
+	System.out.println("Do widzenia.");
 	}
 }

@@ -50,7 +50,6 @@ public class Pizza extends Menu{
 		System.out.print("Podaj cene œredniej pizzy:");
 		Scanner odczyt= new Scanner(System.in);
 		cena= odczyt.nextInt();
-		//puzniej wykozystasz w zamowieniach i w sumie do Menu te¿ 
 		}
 	
 }
