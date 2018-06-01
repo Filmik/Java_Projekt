@@ -2,24 +2,27 @@ package System_Zamowien;
 
 import java.util.Scanner;
 
-public class Zamowienia extends Pizza{
-	
-	public static  Pizza Wegetarianska;
+public class Zamowienia extends Pizza {
 	String[] zam=new String[100];
 	int[] ilosc = new int[100];
 	int[] wielkosc=new int[100];
 	String odp;
 	String adres;
-	String a=Wegetarianska.Podaj_nazwa();//powinno dzia³aæ
-	public void Skladanie_zamowienia() {
+
+	public void Skladanie_zamowienia(String Wegetarianska,String Capricciosa,String Pepperoni) {
 		int x=0;
+		System.out.println("aaa= "+Wegetarianska);//dzia³aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		
 		System.out.println("System sk³adania zamowienia");
 		do{
-		System.out.print("Podaj nazwê pizzy: ");
-		Scanner odczyt= new Scanner(System.in);
-		zam[x]=odczyt.nextLine();
-		System.out.println(zam[x]);
-		//if(zam!=...)
+			
+			Scanner odczyt= new Scanner(System.in);
+			do{System.out.print("Podaj nazwê pizzy: ");
+			zam[x]=odczyt.nextLine();
+			System.out.println("");
+			System.out.println("cap="+Capricciosa);
+			}while(zam[x]!=Capricciosa);//z jakieœ powodu nie dzia³a, zrob jakoœ inaczej
+			
 		do {
 		System.out.print("Podaj iloœæ: ");
 		Scanner ile= new Scanner(System.in);

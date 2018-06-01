@@ -3,16 +3,16 @@ package System_Zamowien;
 import java.util.Scanner;
 //import java.lang.*;
 
-public class Menu extends Main {
-	
+public class Menu {
 	protected String nazwa;
 	protected String[] skladniki= new String[15];
 	public int ostrosc;
 	public int cena;
-	// cena œredniej+5z³ cena du¿ej w stosunku do ma³ej+10z³ //mozna dodaæ jedn¹ z trzech metod
-	//Przy³ad
 	
-	//zrob z tego klase i bedzie fabryka!
+	// cena œredniej+5z³ cena du¿ej w stosunku do ma³ej+10z³ //WZORZEC1 
+	
+	
+	//zrob z tego klase i bedzie fabryka! WZORZEC2
 	public String Podaj_nazwa(){
 		return nazwa;}
 	public void Ustaw_nazwa(String nazwa){

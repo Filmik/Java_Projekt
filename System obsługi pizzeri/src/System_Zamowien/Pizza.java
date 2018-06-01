@@ -3,12 +3,6 @@ import java.util.Scanner;
 
 public class Pizza extends Menu{
 	
-	/*protected String nazwa;
-	protected String[] skladniki= new String[15];
-	public int ostrosc;
-	public int cena;*/// cena œredniej+5z³ cena du¿ej w stosunku do ma³ej+10z³ //mozna dodaæ jedn¹ z trzech metod
-	//Przy³ad
-	
 	public String podaj_nazwe() {
 		System.out.println("Podaj nazwê pizzy");
 		Scanner odczyt= new Scanner(System.in);
