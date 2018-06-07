@@ -17,6 +17,8 @@ public class Menu {
 		return nazwa;}
 	public void Ustaw_nazwa(String nazwa){
 		this.nazwa= nazwa;}
+	public int Podaj_cene(int cena){
+		return cena;}
 	
 	public String Podaj_skladniki(){
 		return skladniki[15];}
@@ -49,16 +51,8 @@ public class Menu {
 	public void Ustaw_cena(int cena){
 		this.cena= cena;}
 	
-	/*public String Podaj_skladniki(){
-		return skladniki[15];}
-	
-	public int Podaj_ostrosc(){
-		return ostrosc;}
-	
-	public int Podaj_celnoœæ(){
-		return cena;}*/
-	
 	public void wypisz_skladniki() {
+		if(nazwa!=null){
 		int x=0;
 		System.out.print(nazwa+"(");
 		do {
@@ -73,11 +67,7 @@ public class Menu {
 		System.out.print((cena-5)+" z³ ma³a,");
 		System.out.print(cena+" z³ œrednia,");
 		System.out.println((cena+5)+" z³ du¿a");
-	}
-	
-	public void menu() {
-		if(nazwa!=null){
-		wypisz_skladniki();
 		}
 	}
+	
 }

@@ -14,11 +14,7 @@ public class Main {
 		Wegetarianska.Ustaw_nazwa("Wegetariañska");
 		Wegetarianska.Ustaw_skladniki(args);
 		Wegetarianska.Ustaw_ostrosc(0);
-		Wegetarianska.Ustaw_cena(25);
-		String a=Wegetarianska.Podaj_nazwa();
-		System.out.println("a="+a);
-		//System.out.println("a= "+Wegetarianska.Podaj_nazwa());//DZIA£A!!!
-		
+		Wegetarianska.Ustaw_cena(25);	
 		
 		Capricciosa.Ustaw_nazwa("Capricciosa");
 		Capricciosa.Ustaw_skladniki(args);
@@ -49,10 +45,10 @@ public class Main {
 		}
 		System.out.println("Menu");
 		System.out.println("-------------------------------------------------------------------------------------------");
-		Wegetarianska.menu();
-		Capricciosa.menu();
-		Pepperoni.menu();
-		Pizza1.menu();
+		Wegetarianska.wypisz_skladniki();
+		Capricciosa.wypisz_skladniki();
+		Pepperoni.wypisz_skladniki();
+		Pizza1.wypisz_skladniki();
 		System.out.println("-------------------------------------------------------------------------------------------");
 
 		
@@ -61,7 +57,7 @@ public class Main {
 		odp= zam.nextLine();
 		if(odp.equals("t")){
 		Zamowienia Order1= new Zamowienia();
-		Order1.Skladanie_zamowienia(Wegetarianska.Podaj_nazwa(),Capricciosa.Podaj_nazwa(),Pepperoni.Podaj_nazwa());
+		Order1.Skladanie_zamowienia(Wegetarianska,Capricciosa,Pepperoni,Pizza1);
 		Order1.Wypisz_zamowienie();
 		}
 	System.out.println("Do widzenia.");
