@@ -1,6 +1,6 @@
 package System_Zamowien;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 //import java.lang.*;
 
 public class Menu {

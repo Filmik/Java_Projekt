@@ -2,7 +2,7 @@ package System_Zamowien;
 
 import java.util.Scanner;
 
-public class Zamowienia extends Pizza {
+public class Zamowienia {//extends Pizza {
 	String[] zam=new String[100];
 	int[] ilosc = new int[100];
 	int[] wielkosc=new int[100];
@@ -23,6 +23,8 @@ public class Zamowienia extends Pizza {
 			if(zam[x].equals(Capricciosa.nazwa)) {
 				zamu=1;}
 			if(zam[x].equals(Pepperoni.nazwa)) {
+				zamu=1;}
+			if(zam[x].equals(Pizza1.nazwa)) {
 				zamu=1;}
 			System.out.println("");
 			}while(zamu!=1 );
@@ -60,7 +62,16 @@ public class Zamowienia extends Pizza {
 					 cena_zamowienia+=Pepperoni.Podaj_cena()*ilosc[x];}
 				if(wielkosc[x]==3) {
 					 cena_zamowienia+=(Pepperoni.Podaj_cena()+5)*ilosc[x];}
+				
 		}
+			if(zam[x].equals(Pizza1.nazwa)) {
+				if(wielkosc[x]==1) {
+				 cena_zamowienia+=(Pizza1.Podaj_cena()-5)*ilosc[x];}
+				if(wielkosc[x]==2) {
+					 cena_zamowienia+=Pizza1.Podaj_cena()*ilosc[x];}
+				if(wielkosc[x]==3) {
+					 cena_zamowienia+=(Pizza1.Podaj_cena()+5)*ilosc[x];}
+			}
 		System.out.println("Jeszcze jak¹œ pizze? Tak=t/Nie=n");
 		Scanner czy_jescze= new Scanner(System.in);
 		odp= czy_jescze.nextLine();
