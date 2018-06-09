@@ -5,6 +5,7 @@ public class Pizza extends Menu{
 	
 	public String podaj_nazwe() {
 		System.out.println("Podaj nazwê pizzy");
+		@SuppressWarnings("resource")
 		Scanner odczyt= new Scanner(System.in);
 		nazwa= odczyt.nextLine() ;
 		return nazwa;

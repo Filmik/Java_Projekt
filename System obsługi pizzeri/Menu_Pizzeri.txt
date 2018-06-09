@@ -1,1 +1,3 @@
-Menu_Pizzeri.txtNowa pizza Sladniki
+Wegetariañska(papryka,pomido,ser) ostroœæ 0 ,20 z³ ma³a,25 z³ œrednia,30 z³ du¿a
+Capricciosa(pieczarki,sos,szynka) ostroœæ 1 ,22 z³ ma³a,27 z³ œrednia,32 z³ du¿a
+Pepperoni(salami,papryka ostra,cebula,ser) ostroœæ 5 ,25 z³ ma³a,30 z³ œrednia,35 z³ du¿a

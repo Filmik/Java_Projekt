@@ -4,10 +4,6 @@ import java.util.Scanner;
 
 public class Wywolanie extends Pizza{
 	
-	public void zapis_txt(){
-		
-	}
-	
 	public void wywolanie(String[] args){
 		
 		Pizza Pizza1=new Pizza();//mozna zrobic osobna finkcje do dodania pizzy i inno do wczytania z pliku i wypisania
@@ -29,9 +25,7 @@ public class Wywolanie extends Pizza{
 		Pepperoni.Ustaw_skladniki(args);
 		Pepperoni.Ustaw_ostrosc(5);
 		Pepperoni.Ustaw_cena(30);
-		
-		//ZapisIWczytanieZtxt pepe=new ZapisIWczytanieZtxt();
-		//pepe.zapis(Pepperoni.wypisz_skladniki());
+	
 		
 		String odp;
 		System.out.println("Czy chcesz dodaæ now¹ pizze do Menu? Tak=t/Nie=n");
@@ -46,10 +40,11 @@ public class Wywolanie extends Pizza{
 			Pizza1.podaj_skladniki();
 			Pizza1.podaj_ostrosc();
 			Pizza1.podaj_cene();
+			Pizza1.wypisz_skladniki();
 			}
 		
 		System.out.println("Menu");
-		System.out.println("-------------------------------------------------------------------------------------------");
+		System.out.println("-------------------------------------------------------------------------------------------");	
 		Wegetarianska.wypisz_skladniki();
 		Capricciosa.wypisz_skladniki();
 		Pepperoni.wypisz_skladniki();

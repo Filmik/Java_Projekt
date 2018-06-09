@@ -11,7 +11,6 @@ public class Menu {
 	
 	// cena œredniej+5z³ cena du¿ej w stosunku do ma³ej+10z³ //WZORZEC1 
 	
-	
 	//zrob z tego klase i bedzie fabryka! WZORZEC2
 	public String Podaj_nazwa(){
 		return nazwa;}
@@ -19,9 +18,18 @@ public class Menu {
 		this.nazwa= nazwa;}
 	public int Podaj_cene(int cena){
 		return cena;}
-	
 	public String Podaj_skladniki(){
 		return skladniki[15];}
+	public int Podaj_ostrosc(){
+		return ostrosc;}
+	public void Ustaw_ostrosc(int ostrosc){
+		this.ostrosc= ostrosc;}
+		
+	public int Podaj_cena(){
+		return cena;}
+	public void Ustaw_cena(int cena){
+		this.cena= cena;}
+	
 	public void Ustaw_skladniki(String[] skladniki){
 		if(nazwa=="Wegetariañska") {
 		this.skladniki[0]= "papryka";
@@ -40,16 +48,6 @@ public class Menu {
 			this.skladniki[3]= "ser";
 			}
 	}
-	
-	public int Podaj_ostrosc(){
-		return ostrosc;}
-	public void Ustaw_ostrosc(int ostrosc){
-		this.ostrosc= ostrosc;}
-		
-	public int Podaj_cena(){
-		return cena;}
-	public void Ustaw_cena(int cena){
-		this.cena= cena;}
 	
 	public void wypisz_skladniki() {
 		if(nazwa!=null){

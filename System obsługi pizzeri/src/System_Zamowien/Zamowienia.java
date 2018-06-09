@@ -87,6 +87,7 @@ public class Zamowienia {//extends Pizza {
 				adres= adr.nextLine();
 			}
 	}
+	
 	public void Wypisz_zamowienie() {
 		int x=0;
 		System.out.println("");
