@@ -1,8 +1,7 @@
 package System_Zamowien;
-
 import java.util.Scanner;
 
-public class Zamowienia {//extends Pizza {
+public class Zamowienia {
 	String[] zam=new String[100];
 	int[] ilosc = new int[100];
 	int[] wielkosc=new int[100];
@@ -10,6 +9,7 @@ public class Zamowienia {//extends Pizza {
 	String adres;
 	int cena_zamowienia;
 	
+	//Pozwala zlozyc zamowienie
 	public void Skladanie_zamowienia(Pizza Wegetarianska,Pizza Capricciosa,Pizza Pepperoni,Pizza Pizza1) {
 		int x=0;
 		System.out.println("System sk³adania zamowienia");
@@ -31,12 +31,10 @@ public class Zamowienia {//extends Pizza {
 			
 		do {
 		System.out.print("Podaj iloœæ: ");
-		//Scanner ile= new Scanner(System.in);
 		ilosc[x]=odczyt.nextInt();
 		}while(ilosc[x]<1);
 		do {
 		System.out.print("Podaj Wielkoœæ: /1-ma³a 2-œrednia 3-du¿a ");
-		//Scanner wiel= new Scanner(System.in);
 		wielkosc[x]=odczyt.nextInt();
 		}while(wielkosc[x]<1||wielkosc[x]>3);
 		if(zam[x].equals(Wegetarianska.nazwa)) {
@@ -72,12 +70,12 @@ public class Zamowienia {//extends Pizza {
 				if(wielkosc[x]==3) {
 					 cena_zamowienia+=(Pizza1.Podaj_cena()+5)*ilosc[x];}
 			}
-		System.out.println("Jeszcze jak¹œ pizze? Tak=t/Nie=n");
+		System.out.println("Jeszcze jak¹œ pizze? Tak=enter/Nie=n");
 		Scanner czy_jescze= new Scanner(System.in);
 		odp= czy_jescze.nextLine();
 		x=x+1;
 		}while(odp.equals("t"));
-		System.out.println("Odbiór osobisty?(Koszt dowozu pod podany adres=10) Tak=t/Nie=n");
+		System.out.println("Odbiór osobisty? (Koszt dowozu pod podany adres=10z³) Tak=enter/Nie=n");
 		Scanner odczyt= new Scanner(System.in);
 		odp= odczyt.nextLine();
 			if(odp.equals("n")){
@@ -88,10 +86,11 @@ public class Zamowienia {//extends Pizza {
 			}
 	}
 	
-	public void Wypisz_zamowienie() {
+	public void Wypisz_zamowienie() {//Wypisuje zamowione pizze
 		int x=0;
 		System.out.println("");
-		System.out.println("Podsumowanie zamowienia:");
+		System.out.println("Podsumowanie zamowienia");
+		System.out.println("---------------------------------------");	
 		do {
 		System.out.print("Pizza:");
 		System.out.print(zam[x]);
@@ -104,6 +103,7 @@ public class Zamowienia {//extends Pizza {
 		if(adres!=null) {
 		System.out.println("Pod adres: "+adres);
 		}else {System.out.println("Odbiur osobisty");}
+		System.out.println("---------------------------------------");	
 		System.out.println("");
 		System.out.println("¯wyczmy smacznego!");
 	}

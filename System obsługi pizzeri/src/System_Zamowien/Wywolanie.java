@@ -1,16 +1,15 @@
 package System_Zamowien;
-
 import java.util.Scanner;
 
-public class Wywolanie extends Pizza{
+public class Wywolanie {//Fasada,Fabryka
 	
 	public void wywolanie(String[] args){
-		
-		Pizza Pizza1=new Pizza();//mozna zrobic osobna finkcje do dodania pizzy i inno do wczytania z pliku i wypisania
+		//deklaracja pizzy wyswetlanych w menu
+		Pizza Pizza1=new Pizza();
 		Pizza Wegetarianska=new Pizza();
 		Pizza Capricciosa=new Pizza();
 		Pizza Pepperoni=new Pizza();
-		
+		//ustawianie parametrow pizzy 
 		Wegetarianska.Ustaw_nazwa("Wegetariañska");
 		Wegetarianska.Ustaw_skladniki(args);
 		Wegetarianska.Ustaw_ostrosc(0);
@@ -28,14 +27,12 @@ public class Wywolanie extends Pizza{
 	
 		
 		String odp;
-		System.out.println("Czy chcesz dodaæ now¹ pizze do Menu? Tak=t/Nie=n");
+		System.out.println("Czy chcesz dodaæ now¹ pizze do Menu? Tak=t/Nie=enter");
 		Scanner odczyt= new Scanner(System.in);
 		odp= odczyt.nextLine() ;
 		
-		if(odp.equals("t")){
+		if(odp.equals("t")){//Pozwala dodaæ now¹ pizze
 			System.out.println("Tworzenie Pizzy:");
-			//Pizza Pizza1=new Pizza();
-			//Jakiœ wzorzec projektowy
 			Pizza1.podaj_nazwe();
 			Pizza1.podaj_skladniki();
 			Pizza1.podaj_ostrosc();
@@ -51,10 +48,10 @@ public class Wywolanie extends Pizza{
 		Pizza1.wypisz_skladniki();
 		System.out.println("-------------------------------------------------------------------------------------------");
 
-		System.out.println("Czy chcesz zamówiæ pizze? Tak=t/Nie=n");
+		System.out.println("Czy chcesz zamówiæ pizze? Tak=t/Nie=enter");
 		Scanner zam= new Scanner(System.in);
 		odp= zam.nextLine();
-		if(odp.equals("t")){
+		if(odp.equals("t")){//Pozwala zamowiæ wybrane pizze
 		Zamowienia Order1= new Zamowienia();
 		Order1.Skladanie_zamowienia(Wegetarianska,Capricciosa,Pepperoni,Pizza1);
 		Order1.Wypisz_zamowienie();

@@ -1,36 +1,21 @@
 package System_Zamowien;
 
-//import java.util.Scanner;
-//import java.lang.*;
-
 public class Menu {
 	protected String nazwa;
 	protected String[] skladniki= new String[15];
 	public int ostrosc;
 	public int cena;
 	
-	// cena œredniej+5z³ cena du¿ej w stosunku do ma³ej+10z³ //WZORZEC1 
-	
-	//zrob z tego klase i bedzie fabryka! WZORZEC2
-	public String Podaj_nazwa(){
-		return nazwa;}
 	public void Ustaw_nazwa(String nazwa){
 		this.nazwa= nazwa;}
-	public int Podaj_cene(int cena){
-		return cena;}
-	public String Podaj_skladniki(){
-		return skladniki[15];}
-	public int Podaj_ostrosc(){
-		return ostrosc;}
 	public void Ustaw_ostrosc(int ostrosc){
 		this.ostrosc= ostrosc;}
-		
 	public int Podaj_cena(){
 		return cena;}
 	public void Ustaw_cena(int cena){
 		this.cena= cena;}
 	
-	public void Ustaw_skladniki(String[] skladniki){
+	public void Ustaw_skladniki(String[] skladniki){//ustawia sk³adniki dla pizzy z menu
 		if(nazwa=="Wegetariañska") {
 		this.skladniki[0]= "papryka";
 		this.skladniki[1]= "pomido";
@@ -49,7 +34,7 @@ public class Menu {
 			}
 	}
 	
-	public void wypisz_skladniki() {
+	public void wypisz_skladniki() {//wypisuje pizze do menu
 		if(nazwa!=null){
 		int x=0;
 		System.out.print(nazwa+"(");
