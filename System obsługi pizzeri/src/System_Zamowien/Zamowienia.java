@@ -1,33 +1,46 @@
 package System_Zamowien;
 import java.util.Scanner;
 
-public class Zamowienia {
+public class Zamowienia {//Null objekt
 	String[] zam=new String[100];
 	int[] ilosc = new int[100];
 	int[] wielkosc=new int[100];
 	String odp;
 	String adres;
 	int cena_zamowienia;
+	//int nrPizzy= null;
 	
 	//Pozwala zlozyc zamowienie
 	public void Skladanie_zamowienia(Pizza Wegetarianska,Pizza Capricciosa,Pizza Pepperoni,Pizza Pizza1) {
 		int x=0;
 		System.out.println("System sk³adania zamowienia");
 		do{
+			Null czekaj=null;
 			int zamu=0;
 			Scanner odczyt= new Scanner(System.in);
 			do{System.out.print("Podaj nazwê pizzy: ");
 			zam[x]=odczyt.nextLine();
-			if(zam[x].equals(Wegetarianska.nazwa)) {
-				zamu=1;}
-			if(zam[x].equals(Capricciosa.nazwa)) {
-				zamu=1;}
-			if(zam[x].equals(Pepperoni.nazwa)) {
-				zamu=1;}
+			
+			switch(zam[x])
+			{
+			case "Wegetariañska":
+				zamu=1;
+				break;
+			case "Capricciosa":
+				zamu=1;
+				break;
+			case "Pepperoni":
+				zamu=1;
+				break;
+			default:
+				czekaj=new Null();//Null objekt
+			//	czekaj.nic();
+				break;
+			}
 			if(zam[x].equals(Pizza1.nazwa)) {
 				zamu=1;}
 			System.out.println("");
-			}while(zamu!=1 );
+			}while(zamu!=1);
 			
 		do {
 		System.out.print("Podaj iloœæ: ");
@@ -70,7 +83,7 @@ public class Zamowienia {
 				if(wielkosc[x]==3) {
 					 cena_zamowienia+=(Pizza1.Podaj_cena()+5)*ilosc[x];}
 			}
-		System.out.println("Jeszcze jak¹œ pizze? Tak=enter/Nie=n");
+		System.out.println("Jeszcze jak¹œ pizze? Tak=t/Nie=enter");
 		Scanner czy_jescze= new Scanner(System.in);
 		odp= czy_jescze.nextLine();
 		x=x+1;

@@ -1,19 +1,21 @@
 package System_Zamowien;
 import java.util.Scanner;
 
-public class Wywolanie {//Fasada,Fabryka
+public class Wywolanie {//Fasada
 	
 	public void wywolanie(String[] args){
 		//deklaracja pizzy wyswetlanych w menu
 		Pizza Pizza1=new Pizza();
-		Pizza Wegetarianska=new Pizza();
-		Pizza Capricciosa=new Pizza();
-		Pizza Pepperoni=new Pizza();
-		//ustawianie parametrow pizzy 
+		Fabryka pizza=new Fabryka();
+		//Fabryka Pizzy
+		Pizza Wegetarianska=pizza.getIntance();	
+		Pizza Capricciosa=pizza.getIntance();
+		Pizza Pepperoni=pizza.getIntance();
+		
 		Wegetarianska.Ustaw_nazwa("Wegetariañska");
 		Wegetarianska.Ustaw_skladniki(args);
 		Wegetarianska.Ustaw_ostrosc(0);
-		Wegetarianska.Ustaw_cena(25);	
+		Wegetarianska.Ustaw_cena(25);
 		
 		Capricciosa.Ustaw_nazwa("Capricciosa");
 		Capricciosa.Ustaw_skladniki(args);
@@ -24,7 +26,6 @@ public class Wywolanie {//Fasada,Fabryka
 		Pepperoni.Ustaw_skladniki(args);
 		Pepperoni.Ustaw_ostrosc(5);
 		Pepperoni.Ustaw_cena(30);
-	
 		
 		String odp;
 		System.out.println("Czy chcesz dodaæ now¹ pizze do Menu? Tak=t/Nie=enter");
